@@ -1,0 +1,68 @@
+.header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 10px;
+    width: 100%;
+    background-color:  rgb(46, 46, 128);
+    color: white;
+    height: 60px;
+}
+.left-section{
+    display: flex;
+    /* background-color: aquamarine; */
+    align-items: center;
+    width: 60%
+}
+.right-section{
+    /* background-color: lightpink; */
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 40%;
+}
+.right-section input{
+    background-color: rgb(205, 210, 234);
+    border: none;
+    border-style: none;
+    margin: none;
+    border-radius: 5px;
+    height: 2rem;
+    width: 32%;
+    margin-right:10px;
+    padding: 0px 5px 0px;
+    margin-left: 4px;   
+}
+
+.bell-icon{
+    margin-right: 15px;
+    cursor: pointer;
+}
+.right-section input::placeholder{
+    color: black;
+}
+.logo{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.player-name{
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 50px;
+}
+.profile-photo{
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.current-playing{
+    margin-left: 10px;
+}

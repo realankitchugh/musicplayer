@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    font-family: Roboto, Arial;
+    background-image: url(../images/bgimg.jpg);
+    color: white;
+    padding-left: 5vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+.block-heading{
+    margin-top: 5px;
+    display: block !important;
+}
+.mb10{
+    margin-bottom: 15px;
+}
+p{
+    margin: 0;
+}

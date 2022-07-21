@@ -1,0 +1,230 @@
+main{
+    display: flex;
+    font-family: Roboto, Arial;
+}
+div{
+    margin: 0;
+}
+.playlist-section-left{
+    width: 65%;
+    margin-right: 15px;
+}
+.playlist-section-right{
+    width: 30%;
+}
+.playlist-artist-card{
+    display: flex;
+    background-color: rgb(48, 48, 120);
+    margin-bottom: 50px;
+}
+.img-container{
+    width: 100%;
+}
+.coldplay-playlist-img{
+    width: 100%;
+    height: 100%;
+}
+.about-coldplay{
+    display: flex;
+    flex-direction: column;
+    margin-left: 18px;
+    padding: 10px 5px;
+}
+.followers-count{
+    text-align: end;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+.playlist-artist-name h2, h3{
+    margin: 0;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.playlist-artist-name h2{
+    font-size: 2rem;
+    margin-top: 5px;
+}
+.playlist-artist-name h3{
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+.about-artist{
+    line-height: 23px;
+    font-size: 0.95rem;
+    margin-bottom: 8px;;
+}
+.buttons{
+    margin: 12px 0px;
+}
+.play-all-button{
+    background-image: linear-gradient(-19deg, red 0%, blue 100%);
+    color: white;
+    height: 50px;
+    width: 100px;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+}
+.follow-btn{
+    border: none;
+    background-color: inherit;
+    color: white;
+    font-size: 1.2rem;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.follow-btn:hover{
+    background-color: rgb(158, 158, 211);
+    color: black;
+}
+.play-all-button:hover{
+    box-shadow: 0 0 2px 1px white;
+}
+.playlist-stats{
+    font-size: 0.9rem;
+}
+
+/*  */
+.playlist-song-item{
+    display: flex;
+    background-color: rgb(34, 34, 83);
+    height: 67px;
+    margin-bottom: 5px;
+}
+.playlist-song-item:hover{
+    background-color: rgb(52, 52, 104);
+}
+.song-index{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+.song-photo{
+    width: 8%;
+}
+.song-photo img{
+    width: 100%;
+    height: 100%;
+}
+.song-name{
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+.name-artist{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 13px;
+    cursor: pointer;
+}
+.artist-name{
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: whitesmoke;
+}
+.song-duration{
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 400;   
+}
+.like, .add-to-playlist{
+    display: flex;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+}
+.like i, .add-to-playlist i{
+    cursor: pointer;
+}
+.playlist-section-left, .playlist-section-right{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+
+}
+
+.similar-artists-heading{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.similar-artists-heading p:first-child{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.similar-artists-heading p:nth-child(2){
+    color: lightgray;
+}
+.similar-artists-heading p:nth-child(2):hover{
+    cursor: pointer;
+}
+.card{
+    display: flex;
+    margin-bottom: 15px;
+    width: 90%;
+}
+.card:hover{
+    box-shadow: 0 0 2px 2px white;
+    cursor: pointer;
+}
+.image{
+    width: 100px;
+}
+.image img{
+    width: 100px;
+    height: 100px;
+}
+.about{
+    display: flex;
+    margin-left: 10px;
+    flex-direction: column;
+    width: 65%;
+    justify-content: center;
+}
+.about p:first-child{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.color{
+    color: white;
+}
+.like-flex{
+    width: 10%;
+}
+.recently-played{
+    height: 50%;
+    margin-top: 20px;
+}
+.recently-played-heading{
+    display: flex;
+    justify-content: space-between;
+}
+.recently-played-heading p:first-child{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.recently-played-heading p:nth-child(2){
+    color: lightgray;  
+}
+.recently-played-heading p:nth-child(2):hover{
+    cursor: pointer;
+    color: rgb(167, 162, 162)
+}
+.recently-played .song-photo{
+    width: 15%;
+}
+.recently-played .playlist-song-item{
+    margin-bottom: 10px;
+    height: 85px;
+}

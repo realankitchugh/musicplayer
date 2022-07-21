@@ -1,0 +1,26 @@
+.carousel-container {
+    width: 100%;
+    margin-bottom: 5vh;
+    display: flex;
+}
+.carousel-container div{
+    width: 33%;
+}
+.carousel-container div img{
+    width: 100%;
+}
+.carousel-container div img:hover{
+    transform: scale(1.5);
+}
+.main-container{
+    display: flex;
+}
+.section-left{
+    width: 70%;
+}
+@media(min-width: 500px){
+    .latest-releases-container{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}

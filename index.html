@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Player</title>
+<!-- All sections have been named appropriately and all the sections have separate css files for ease of understanding -->
+    <!-- External fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Css files used in the project -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/latest-releases.css">
+    <link rel="stylesheet" href="./css/popular-artists.css">
+    <link rel="stylesheet" href="./css/latest-english-hindi.css">
+    <link rel="stylesheet" href="./css/queue.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    
+    <!-- font awesome used to use a few icons -->
+    <script src="https://kit.fontawesome.com/4c7f7a95ea.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header section, this is to be displayed on the page even while scrolling so make its position fixed and z-index higher than all other elements -->
+    <header style="z-index: 200;" class="header">
+        <div class="left-section">
+            <img class="logo" src="./images/Music player Logo.png" alt="">
+            <p class="player-name">2 AM Player</p>
+            <p class="current-playing">#Favourites</p>
+        </div>
+        <div class="right-section">
+            <i class="fa fa-search search-icon"></i>
+            <input type="text" placeholder="Search...">
+            <i class="fa fa-bell bell-icon"></i>
+            <img class='profile-photo' src="./images/profile-photo.png" alt="">
+        </div>
+    </header>
+    <!-- main section -->
+    <!-- make the container flex to have a left section and a right section -->
+    <main>
+        <div class="main-container">
+            <div class="section-left">
+                <!-- Carousel Container -->
+                <section class="carousel-container">
+                        <div>
+                            <img src="./images/carousel-1.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="./images/carousel-2.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="./images/carousel-3.jpg" alt="">
+                        </div>
+                </section>
+                <!-- latestreleases-->
+                <!-- make the container display as grid with 2 columns for max width and make it responsive with 1 column for small screen -->
+                <section class="latest-releases-container">
+                    <h2 class="block-heading">Latest Releases</h2><br>
+                    <div class="latest-release-song-card">
+                        <div class="card-image">
+                            <img src="./images/play-btn.jpg" class="play-btn-img" alt="">
+                            <img src="./images/carousel-1.jpg" alt="">
+                        </div>
+                        <div class="song-description">
+                            <p class="song-name">Whatever I Want</p>
+                            <p class="release-date">December, 2020</p>
+                        </div>
+                        <div class="card-options">
+                            <div class="options">
+                                <svg class="svg-inline--fa fa-ellipsis-h fa-w-16 " aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-h" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+                                <div class="dropdown">
+                                    <p>Play Now</p>
+                                    <p>Add to Queue</p>
+                                    <p>Add to Playlist</p>
+                                    <p>Get Info</p>
+                                </div>
+                            </div>
+                            <p>4:20</p>
+                        </div>
+                    </div>
+                    <!-- implement each song card by making the card as flexbox and adding necessary borders and margins -->
+                    <div class="latest-release-song-card">
+                        <div class="card-image">
+                            <img src="./images/play-btn.jpg" class="play-btn-img" alt="">
+                            <img src="./images/carousel-1.jpg" alt="">
+                        </div>
+                        <div class="song-description">
+                            <p class="song-name">Whatever I Want</p>
+                            <p class="release-date">December, 2020</p>
+                        </div>
+                        <div class="card-options">
+                            <div class="options">
+                                <svg class="svg-inline--fa fa-ellipsis-h fa-w-16 " aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-h" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+                                <div class="dropdown">
+                                    <p>Play Now</p>
+                                    <p>Add to Queue</p>
+                                    <p>Add to Playlist</p>
+                                    <p>Get Info</p>
+                                </div>
+                            </div>
+                            <p>4:20</p>
+                        </div>
+                    </div>
+                    <div class="latest-release-song-card">
+                        <div class="card-image">
+                            <img src="./images/play-btn.jpg" class="play-btn-img" alt="">
+                            <img src="./images/carousel-1.jpg" alt="">
+                        </div>
+                        <div class="song-description">
+                            <p class="song-name">Whatever I Want</p>
+                            <p class="release-date">December, 2020</p>
+                        </div>
+                        <div class="card-options">
+                            <div class="options">
+                                <svg class="svg-inline--fa fa-ellipsis-h fa-w-16 " aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-h" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+                                <div class="dropdown">
+                                    <p>Play Now</p>
+                                    <p>Add to Queue</p>
+                                    <p>Add to Playlist</p>
+                                    <p>Get Info</p>
+                                </div>
+                            </div>
+                            <p>4:20</p>
+                        </div>
+                    </div>
+                    <div class="latest-release-song-card">
+                        <div class="card-image">
+                            <img src="./images/play-btn.jpg" class="play-btn-img" alt="">
+                            <img src="./images/carousel-1.jpg" alt="">
+                        </div>
+                        <div class="song-description">
+                            <p class="song-name">Whatever I Want</p>
+                            <p class="release-date">December, 2020</p>
+                        </div>
+                        <div class="card-options">
+                            <div class="options">
+                                <svg class="svg-inline--fa fa-ellipsis-h fa-w-16 " aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis-h" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"></path></svg>
+                                <div class="dropdown">
+                                    <p>Play Now</p>
+                                    <p>Add to Queue</p>
+                                    <p>Add to Playlist</p>
+                                    <p>Get Info</p>
+                                </div>
+                            </div>
+                            <p>4:20</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Popular Artists Container -->
+                <!-- This is a simple flexbox with direction as row. This also brings the single playlist screen -->
+                <!-- This can be made responsive by making the entire container as grid inside the media query with single column and multiple rows -->
+                <section class="popular-artists-container">
+                    <h2 class="block-heading">Popular Artists</h2><br>
+                    <div class="artists-cards-container">
+                        <!-- The artist card is implemented with basic position properties -->
+                        <div class="artist-card">
+                            <a href="./playlist.html">
+                            <img class="artist-image" src="./images/popular artists/kendrick.jpg" alt="">
+                            </a>
+                            <p>Kendrick Lamar</p>
+                        </div>
+                        <div class="artist-card">
+                            <a href="./playlist.html">
+                            <img class="artist-image" src="./images/popular artists/drake.webp
+                            " alt=""></a>
+                            <p>Drake</p>
+                        </div>
+                        <div class="artist-card">
+                            <a href="./playlist.html">
+                                <img class="artist-image" src="./images/popular artists/zayn.jpg" alt="">
+                            </a>
+                            <p>Zayn</p>
+                        </div>
+                        <div class="artist-card">
+                            <a href="./playlist.html">
+                                <img class="artist-image" src="./images/popular artists/coldplay.jpg" alt="">
+                            </a>
+                            <p>Coldplay</p>
+                        </div>
+                        <div class="artist-card">
+                            <a href="./playlist.html">
+                                <img class="artist-image" src="./images/popular artists/justin.jpg" alt="">
+                            </a>
+                            <p>Justin Bieber</p>
+                        </div>
+                        <div class="artist-card">
+                            <a href="./playlist.html">
+                                <img class="artist-image" src="./images/popular artists/imagine-dragons.jpg" alt="">
+                            </a>
+                            <p>Imagine Dragons</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Stations Container -->
+                <!-- This container contains two rows and is implemented using a flexbox -->
+                <!-- This uses some basic css position properties to implement the design -->
+                <section class="stations-container">
+                    <div class="stations">
+                        <div class="station-logo">
+                            <img class="station-logo-img" src="./images/stations/logo.jpg" alt="">
+                            <p>Stations</p>
+                        </div>
+                        <div class="station-card">
+                            <img class="station-card-img" src="./images/stations/chill.jpeg" alt="">
+                            <p class="station-type">Chill</p>
+                        </div>
+                        <div class="station-card">
+                            <img class="station-card-img" src="./images/stations/love.jpg" alt="">
+                            <p class="station-type">Love</p>
+                        </div>
+                        <div class="station-card">
+                            <img class="station-card-img" src="./images/stations/workout.jpg" alt="">
+                            <p class="station-type">Workout</p>
+                        </div>
+                        <div class="station-card">
+                            <img class="station-card-img" src="./images/stations/rock.jpg" alt="">
+                            <p class="station-type">Rock</p>
+                        </div>
+                        <div class="station-card">
+                            <img class="station-card-img" src="./images/stations/road trip.webp" alt="">
+                            <p class="station-type">Road Trip</p>
+                        </div>
+                        <div class="station-card">
+                            <img class="station-card-img" src="./images/stations/retro.webp" alt="">
+                            <p class="station-type">Retro</p>
+                        </div>
+                    </div>
+                    <div class="stations-category">
+                        <div class="station-categ">
+                            <img class="station-categ-img" src="./images/stations/electronic.jpg" alt="">
+                            <p>Electronic</p>
+                        </div>
+                        <div class="station-categ">
+                            <img class="station-categ-img" src="./images/stations/party.jpg" alt="">
+                            <p>Party</p>
+                        </div>
+                        <div class="station-categ">
+                            <img class="station-categ-img" src="./images/stations/pop.webp" alt="">
+                            <p>Pop</p>
+                        </div>
+                    </div>
+
+                </section>
+                <!-- Latest English and latest hindi containers is created with exact same design and styles. This is made responsive using grid and making it only single column -->
+                <section class="latest-english-container">
+                    <h2>Latest English</h2>
+                    <div class="songs-container">
+                        <div class="latest-song-card">
+                            <img class="latest-song-img" src="./images/carousel-1.jpg" alt="">
+                            <p class="song-name">Whatever I Want</p>
+                            <p class="release-date">December, 2020</p>
+                        </div>
+                        <div class="latest-song-card">
+                            <img class="latest-song-img" src="./images/carousel-2.jpg" alt="">
+                            <p class="song-name">Whatever I Want</p>
+                            <p class="release-date">December, 2020</p>
+                        </div>
+                        <div class="latest-song-card">
+                            <img class="latest-song-img" src="./images/carousel-3.jpg" alt="">
+                            <p class="song-name">Whatever I Want</p>
+                            <p class="release-date">December, 2020</p>
+                        </div>
+                        <div class="latest-song-card">
+                            <img class="latest-song-img" src="./images/carousel-1.jpg" alt="">
+                            <p class="song-name">Whatever I Want</p>
+                            <p class="release-date">December, 2020</p>
+                        </div>
+                        <div class="latest-song-card">
+                            <img class="latest-song-img" src="./images/carousel-2.jpg" alt="">
+                            <p class="song-name">Whatever I Want</p>
+                            <p class="release-date">December, 2020</p>
+                        </div>
+                        <div class="latest-song-card">
+                            <img class="latest-song-img" src="./images/carousel-3.jpg" alt="">
+                            <p class="song-name">Whatever I Want</p>
+                            <p class="release-date">December, 2020</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="latest-hindi-container">
+                    <h2>Latest Hindi</h2>
+                    <div class="songs-container">
+                        <div class="latest-song-card">
+                            <img class="latest-song-img" src="./images/carousel-1.jpg" alt="">
+                            <p class="song-name">Whatever I Want</p>
+                            <p class="release-date">December, 2020</p>
+                        </div>
+                        <div class="latest-song-card">
+                            <img class="latest-song-img" src="./images/carousel-2.jpg" alt="">
+                            <p class="song-name">Whatever I Want</p>
+                            <p class="release-date">December, 2020</p>
+                        </div>
+                        <div class="latest-song-card">
+                            <img class="latest-song-img" src="./images/carousel-3.jpg" alt="">
+                            <p class="song-name">Whatever I Want</p>
+                            <p class="release-date">December, 2020</p>
+                        </div>
+                        <div class="latest-song-card">
+                            <img class="latest-song-img" src="./images/carousel-1.jpg" alt="">
+                            <p class="song-name">Whatever I Want</p>
+                            <p class="release-date">December, 2020</p>
+                        </div>
+                        <div class="latest-song-card">
+                            <img class="latest-song-img" src="./images/carousel-2.jpg" alt="">
+                            <p class="song-name">Whatever I Want</p>
+                            <p class="release-date">December, 2020</p>
+                        </div>
+                        <div class="latest-song-card">
+                            <img class="latest-song-img" src="./images/carousel-3.jpg" alt="">
+                            <p class="song-name">Whatever I Want</p>
+                            <p class="release-date">December, 2020</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="queue-container">
+                <div class="queue-header">
+                    <h2>Queue</h2>
+                    <div class="drop">
+                        <button class="dropbtn">
+                            Queue <i class="fa-solid fa-circle-arrow-down"></i> 
+                        </button>
+                        <div class="drop-content">
+                            <div><a href="./playlist.html" target="_blank">Playlist</a></div>
+                            <div><a href="./playlist.html" target="_blank">Favourites</a></div>
+                            <div><a href="./playlist.html" target="_blank">Liked Songs</a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="queue-songs">
+                    <div class="queue-song">
+                        <p>01</p>
+                        <div class="song-img-div">
+                            <img class="song-img" src="./images/dna-kendrick.jpg" alt="">
+                        </div>
+                        <div class="queue-song-description">
+                            <p class="song-name">DNA</p>
+                            <p class="song-artist-name">Kendrick Lamar</p>
+                        </div>
+                        <div class="like-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song">
+                        <p>02</p>
+                        <div class="song-img-div">
+                            <img class="song-img" src="./images/carousel-1.jpg" alt="">
+                        </div>
+                        <div class="queue-song-description">
+                            <p class="song-name">DNA</p>
+                            <p class="song-artist-name">Kendrick Lamar</p>
+                        </div>
+                        <div class="like-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song">
+                        <p>03</p>
+                        <div class="song-img-div">
+                            <img class="song-img" src="./images/carousel-2.jpg" alt="">
+                        </div>
+                        <div class="queue-song-description">
+                            <p class="song-name">DNA</p>
+                            <p class="song-artist-name">Kendrick Lamar</p>
+                        </div>
+                        <div class="like-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song">
+                        <p>04</p>
+                        <div class="song-img-div">
+                            <img class="song-img" src="./images/carousel-3.jpg" alt="">
+                        </div>
+                        <div class="queue-song-description">
+                            <p class="song-name">DNA</p>
+                            <p class="song-artist-name">Kendrick Lamar</p>
+                        </div>
+                        <div class="like-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song">
+                        <p>05</p>
+                        <div class="song-img-div">
+                            <img class="song-img" src="./images/dna-kendrick.jpg" alt="">
+                        </div>
+                        <div class="queue-song-description">
+                            <p class="song-name">DNA</p>
+                            <p class="song-artist-name">Kendrick Lamar</p>
+                        </div>
+                        <div class="like-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song">
+                        <p>06</p>
+                        <div class="song-img-div">
+                            <img class="song-img" src="./images/carousel-1.jpg" alt="">
+                        </div>
+                        <div class="queue-song-description">
+                            <p class="song-name">DNA</p>
+                            <p class="song-artist-name">Kendrick Lamar</p>
+                        </div>
+                        <div class="like-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song">
+                        <p>07</p>
+                        <div class="song-img-div">
+                            <img class="song-img" src="./images/carousel-2.jpg" alt="">
+                        </div>
+                        <div class="queue-song-description">
+                            <p class="song-name">DNA</p>
+                            <p class="song-artist-name">Kendrick Lamar</p>
+                        </div>
+                        <div class="like-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song">
+                        <p>08</p>
+                        <div class="song-img-div">
+                            <img class="song-img" src="./images/carousel-3.jpg" alt="">
+                        </div>
+                        <div class="queue-song-description">
+                            <p class="song-name">DNA</p>
+                            <p class="song-artist-name">Kendrick Lamar</p>
+                        </div>
+                        <div class="like-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song">
+                        <p>09</p>
+                        <div class="song-img-div">
+                            <img class="song-img" src="./images/dna-kendrick.jpg" alt="">
+                        </div>
+                        <div class="queue-song-description">
+                            <p class="song-name">DNA</p>
+                            <p class="song-artist-name">Kendrick Lamar</p>
+                        </div>
+                        <div class="like-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song">
+                        <p>10</p>
+                        <div class="song-img-div">
+                            <img class="song-img" src="./images/carousel-1.jpg" alt="">
+                        </div>
+                        <div class="queue-song-description">
+                            <p class="song-name">DNA</p>
+                            <p class="song-artist-name">Kendrick Lamar</p>
+                        </div>
+                        <div class="like-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song">
+                        <p>11</p>
+                        <div class="song-img-div">
+                            <img class="song-img" src="./images/carousel-2.jpg" alt="">
+                        </div>
+                        <div class="queue-song-description">
+                            <p class="song-name">DNA</p>
+                            <p class="song-artist-name">Kendrick Lamar</p>
+                        </div>
+                        <div class="like-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song">
+                        <p>12</p>
+                        <div class="song-img-div">
+                            <img class="song-img" src="./images/carousel-3.jpg" alt="">
+                        </div>
+                        <div class="queue-song-description">
+                            <p class="song-name">DNA</p>
+                            <p class="song-artist-name">Kendrick Lamar</p>
+                        </div>
+                        <div class="like-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song">
+                        <p>13</p>
+                        <div class="song-img-div">
+                            <img class="song-img" src="./images/dna-kendrick.jpg" alt="">
+                        </div>
+                        <div class="queue-song-description">
+                            <p class="song-name">DNA</p>
+                            <p class="song-artist-name">Kendrick Lamar</p>
+                        </div>
+                        <div class="like-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song">
+                        <p>14</p>
+                        <div class="song-img-div">
+                            <img class="song-img" src="./images/carousel-1.jpg" alt="">
+                        </div>
+                        <div class="queue-song-description">
+                            <p class="song-name">DNA</p>
+                            <p class="song-artist-name">Kendrick Lamar</p>
+                        </div>
+                        <div class="like-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song">
+                        <p>15</p>
+                        <div class="song-img-div">
+                            <img class="song-img" src="./images/carousel-2.jpg" alt="">
+                        </div>
+                        <div class="queue-song-description">
+                            <p class="song-name">DNA</p>
+                            <p class="song-artist-name">Kendrick Lamar</p>
+                        </div>
+                        <div class="like-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="queue-song">
+                        <p>16</p>
+                        <div class="song-img-div">
+                            <img class="song-img" src="./images/carousel-3.jpg" alt="">
+                        </div>
+                        <div class="queue-song-description">
+                            <p class="song-name">DNA</p>
+                            <p class="song-artist-name">Kendrick Lamar</p>
+                        </div>
+                        <div class="like-section">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+            </div>
+            
+        </div>
+    </main>
+    <footer class="music-player-bar">
+        <section class="footer-left-section">
+            <div class="footer-img-container">
+                <img src="./images/carousel-1.jpg" alt="">
+            </div>
+            <div class="footer-song-info">
+                <p>Whatever I Want by Kat Meoz</p>
+                <p>Kat Meoz</p>
+            </div>
+            <div class="like-dislike">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-ban"></i>
+            </div>
+        </section>
+        <section class="footer-middle-section">
+            <div class="pause-play">
+                <i class="fa-solid fa-shuffle"></i>
+                <i class="fa-solid fa-backward-step"></i>
+                <i class="fa-solid fa-circle-pause"></i>
+                <i class="fa-solid fa-forward-step"></i>
+                <i class="fa-solid fa-repeat"></i>
+            </div>
+            <div class="song-range">
+                1:30
+                <input type="range" min="0" max="100">
+                4:20
+            </div>
+        </section>
+        <section class="footer-right-section">
+            <i class="fa-solid fa-list-music"></i>
+            <i class="fa-solid fa-volume-low"></i>
+            <input type="range">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+        </section>
+    </footer>
+    
+
+</body>
+</html>

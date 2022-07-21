@@ -1,0 +1,101 @@
+.queue-container{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
+    width: 27%;
+    border-left: 2px dotted whitesmoke;
+    margin-left: 10px;
+}
+.queue-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.drop{
+    position: relative;
+    display: inline-block;
+}
+.dropbtn:hover{
+    cursor: pointer;
+}
+.dropbtn{
+    color: greenyellow;
+    background-color: inherit;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+}
+.drop-content{
+    display: none;
+    position: absolute;
+    background-color: rgb(108, 96, 248);
+    border-radius: 3px;
+    border: 3px solid white;
+    width: 145px;
+}
+.drop:hover .drop-content{
+    display: block;
+}
+.drop-content div{
+    /* text-decoration: none; */
+    color: white;
+    padding: 8px 3px;
+    font-weight: 400;
+    padding-left: 5px;
+    border-bottom: 2px dotted white;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+.drop-content div:hover{
+    background-color: rgb(172, 165, 250);
+    cursor:pointer;
+}
+.drop-content div:hover a{
+    color: black;
+}
+.queue-songs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.queue-song{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    padding: 3px 3px;
+    margin-right: 0;
+    margin-bottom: 5px;
+}
+.queue-song:hover{
+    box-shadow: 0 0 3px 3px white;
+    cursor: pointer;
+}
+.queue-song>p{
+    font-size: 1.2rem;
+    width: 8%;
+}
+.song-img-div{
+    width: 27%;
+}
+.song-img{
+    width: 100%;
+}
+.queue-song-description{
+    margin-left: 10px;
+    width: 55%;
+}
+.song-name{
+    font-size: 1.2rem;
+}
+.song-artist-name{
+    font-size: 0.9rem;
+}
+.like-section{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+}

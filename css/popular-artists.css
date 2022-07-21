@@ -1,0 +1,110 @@
+.popular-artists-container{
+    padding: 1vh 1vw 1vh 1vw; 
+    margin-bottom: 20px;   
+}
+.artists-cards-container{
+    display: flex;
+    justify-content: space-between;
+}
+.artist-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.artist-card p{
+    margin-top: 5px;
+    font-weight: 500;
+}
+.artist-image{
+    width: 7vw;
+    border-radius: 50%;
+    transition: all 0.15s;
+    margin-bottom: 5px;
+}
+.artist-card:hover{
+    cursor: pointer;
+    opacity: 0.6;
+    color: rgb(197, 194, 194);
+}
+.stations-container{
+    width: 100%;
+}
+.stations{
+    margin-top: 5vh;
+    display: flex;
+    background-color: rgb(53, 53, 124);
+    align-items: center;
+    padding: 2vh 2vw;
+    justify-content: space-between;
+}
+.station-logo{
+    display: flex;
+    align-items: center;
+    width: 15%;
+    position: relative;
+    justify-content: center;
+    /* height: 20vh; */
+}
+.station-logo p{
+    position: absolute;
+    color: black;
+    font-weight: 600;
+    margin-top: 6vh;
+}
+.station-logo-img{
+    height: 14vh;
+    width: 100%;
+}
+.station-card{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 14vh;
+    justify-content: center;
+}
+.station-card-img{
+    width: 7.5vw;
+    height: 110px;
+    border-radius: 50%;
+}
+.station-card p{
+    position: absolute;
+    font-weight: 500;
+}
+.station-card:hover .station-card-img{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.stations-category{
+    display: flex;
+    margin-top: 4vh;
+    justify-content: space-around;
+}
+.station-categ{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 4vh;
+}
+.station-categ-img{
+    width: 300px;
+    height: 200px;
+    transition: all 0.15s;
+}
+.station-categ p{
+    position: absolute;
+    font-weight: 500;
+    pointer-events: none;
+}
+.station-categ-img:hover{
+    /* transform: scale(1.5); */
+    opacity: 0.7;
+    cursor: pointer;
+    object-fit: none;
+}
+
+
+
